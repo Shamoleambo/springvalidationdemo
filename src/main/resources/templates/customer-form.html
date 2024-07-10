@@ -21,13 +21,13 @@
 
 		<br><br>
 
-		Last name: <input type="text" th:field="*{lastName}" />
+		Last name (*): <input type="text" th:field="*{lastName}" />
 		<span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error"></span>
 
 		<br><br>
 
 		Free passes: <input type="text" th:field="*{freePasses}" />
-		<span th:if="${fields.hasErrors('freePasses')}" th:errors="*{lastName}" class="error"></span>
+		<span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
 
 		<br><br>
 
