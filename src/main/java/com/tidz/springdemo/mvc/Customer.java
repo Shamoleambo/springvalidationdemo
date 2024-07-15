@@ -1,5 +1,7 @@
 package com.tidz.springdemo.mvc;
 
+import com.tidz.springdemo.mvc.validation.CourseCode;
+
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -18,6 +20,7 @@ public class Customer {
 	private Integer freePasses;
 	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 chars/digits")
 	private String postalCode;
+	@CourseCode
 	private String courseCode;
 
 	public Customer() {
